@@ -29,7 +29,7 @@ export class RickAndMortyHomeComponent implements OnInit {
   loadCharacters() {
     this.apiService.getCharacters(this.currentPage, this.searchName).subscribe({
       next: (data) => {
-        console.log('Datos recibidos:', data); // Añade esta línea para debug
+        console.log('Datos recibidos:', data);
         this.characters = data.results;
         this.prev = data.info.prev;
         this.next = data.info.next;

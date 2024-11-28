@@ -7,6 +7,10 @@ export interface Character {
   species: string;
   location: {
     name: string;
+
+  }
+  origin:{
+    name: string;
   };
 }
 
