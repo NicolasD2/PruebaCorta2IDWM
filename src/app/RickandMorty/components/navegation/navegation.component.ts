@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navegation',
-  imports: [],
   templateUrl: './navegation.component.html',
-  styleUrl: './navegation.component.css'
+  styleUrls: ['./navegation.component.css'],
+  standalone: true,
 })
 export class NavegationComponent {
+  @Input() prev!: string | null;
+  @Input() next!: string | null;
+  @Output() onNavigate = new EventEmitter<number>();
 
+  navigate(direction: number) {
+    this.onNavigate.emit(direction);
+  }
 }

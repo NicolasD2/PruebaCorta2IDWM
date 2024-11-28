@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Character } from '../../interfaces/rick-and-morty';
 
 @Component({
   selector: 'app-card',
-  imports: [],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrls: ['./card.component.css'],
+  standalone: true,
 })
 export class CardComponent {
-
+  @Input() character!: Character;
 }
