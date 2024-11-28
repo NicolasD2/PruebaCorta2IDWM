@@ -9,7 +9,7 @@ export interface Character {
     name: string;
 
   }
-  origin:{
+  origin: {
     name: string;
   };
 }

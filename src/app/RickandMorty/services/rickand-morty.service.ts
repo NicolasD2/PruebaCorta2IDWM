@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { ApiResponse } from '../interfaces/rick-and-morty';
 
 @Injectable({
-  providedIn: 'root', // Esto asegura que el servicio esté disponible globalmente
+  providedIn: 'root',
 })
 export class RickandMortyService {
   private apiUrl = 'https://rickandmortyapi.com/api';
